@@ -1,0 +1,121 @@
+<div class="head m-4">
+    <h3 class="text-center text-success"> VIEW CONSUMER</h3>
+    <p>The Kerala State Electricity Board Limited is the successor entity of Kerala State Electricity Board which was
+        constituted by the Government of Kerala, as per order no. EL1-6475/56/PW dated 7-3-1957 of the Kerala State
+        Government, under the Electricity (Supply) Act, 1948 for carrying out the business of Generation, Transmission
+        and Distribution of electricity in the state of Kerala.
+
+        As per section 172 (a) of the Electricity Act 2003 and as mutually decided by the Government of India and
+        Government of Kerala, KSEB had continued as Transmission utility and Distribution licensee till 24-09-2008.
+        In exercise of powers conferred under sub-sections (1), (2), (5), (6) and (7) of section 131 of the Electricity
+        Act, 2003, State Government vide the notification G.O (Ms).37/2008/PD dated 25 September 2008 vested all
+        functions, properties, interests, rights, obligations and liabilities of KSEB with the State Government till it
+        is re-vested the same in a corporate entity.</p>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+<!-- <pre>
+    {{providerId | json}}
+</pre>
+<pre>
+    {{providername | json}}
+</pre> -->
+<h2>Details</h2>
+            <ul class="list-group border border-2 border-primary rounded-4">
+                
+                <li class="list-group-item ">Name:{{consumer.name}} </li>
+
+                <li class="list-group-item"> Id:{{consumer.id}} </li>
+
+                <li class="list-group-item">Phone:{{consumer.phone}} </li>
+                <li class="list-group-item">Email:{{consumer.email}} </li>
+
+                <li class="list-group-item">Place:{{consumer.place}} </li>
+
+                <li class="list-group-item">District:{{consumer.district}} </li>
+                <li class="list-group-item">Provider:{{providername}} </li>
+
+            </ul>
+            <a routerLink="/" class="btn btn-danger my-5">back</a>
+        </div>
+        <div class="col-6">
+            <img class="px-5 ms-5 pb-4" style="height: 400px;"
+                [src]="consumer.photo" alt="">
+
+        </div>
+    </div>
+
+</div>
+
+<footer class="text-center text-dark" style="background-color: yellow;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-danger m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="danger"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg  m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-primary m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-success m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-white m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-danger m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://KSEB.com/">KSEB.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>

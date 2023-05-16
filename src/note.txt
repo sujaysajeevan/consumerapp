@@ -1,0 +1,127 @@
+     1 create a new project - ng new projectname
+            (yes in router)
+     2 cd projectname
+     3 code .
+     4 To run a project -   ng serve --open
+     
+     5 Install bootstrap,fontawesome and google fontawesome
+        -> add all cdn files to index.html for reduce error
+        -> npm i bootstrap  (check in package.json ang node_modules)
+        -> npm i @fortawesome/fontawesome-free  (get from - fortawsom/fontawsom-free npm install)
+     6 config bootstrap, fontawesome and google fontawesome in Angular.json(1=node-modules->bootstrap->dist->css->bootstrap.min.css(copy relative path)->paste into angular.json->styles(change \ into/))
+            (2=fontawesome= node_modules->@fontawesome->css->all.css->into angular.js)
+            (3=js file=node-modules->bootstrap->dis->js->bootstrap.bundle.js(relative path)->angular.js->script)
+            check all are working
+            
+    7 create components
+        
+
+        .updateconsumer- to update contact
+        ng g c updateContact
+        .viewconsumer- to view all contact
+        ng g c viewContact
+        -page not found 
+        -navigation bar design ng g c navbar
+        -home page design
+        -consumer details(contact manager)
+        
+        -new connections design(add)
+        
+..................backend...........................
+    
+     8 api creation   
+        (create ower own json file)
+        go to jsonplceholder site-create my json server
+
+     9 create folder for backend
+        create server folder inside the  src (server) folder
+        create db.json file in thr server folder
+        add our own contact to the json file (array form my json server)
+
+     10 in server folder create package.json 
+        create package.json file -cd src->cd server-> npm  init (enter and yes)
+        create json server(for creating a url) - npm i json-server
+        npm start
+        (error occurs)
+
+        update package.json file script as
+          "scripts": {
+    "start": "json-server --watch db.json --port 3000"
+  },
+      npm start(get the path of json file sp get data from net)
+
+   11 create model for consumer and provider(providing what kind of datas like string,bolean)
+      crater model folder in src folder
+      create my contact.ts file
+      create my group.ts file
+
+    12 fetch data-asyncronous resolving
+        js                =         TS
+        promise           =       observable
+        fetch('url')      =         rxjs library
+        .then()           =         .subscribe()
+
+   13 create api (for every fetching)
+   eg:view contact
+      update component
+
+   14 service creation
+      pass data from one component from another(from add consumer to main page)
+      if components are same data then we create service
+
+      ng g s services/api
+
+   15 to get http methords-get,post,put,patch,delete
+      import Httpclientmodule in app.module.js
+
+   16 Dependency inject httpclient in api services (data share between 2 dependent class)
+   (private http:HttpClient IN api.service constructor)
+
+
+   17 data binding  important topic
+         data sharing inside a component
+
+
+         html(view)->ts(component)
+         ts->html
+    1)one way data binding
+         a)component to view (ts->html)
+               i)string interpolation - {{variable-name}}  
+               ii)property binding -[attribute]="property-name" 
+
+         b)view(html) to component(ts)   
+               i)Event binding - (event="function_name)    
+               ii)event binding using $event - (event)="function_name($event)" 
+
+    2)two way data binding
+               i)ngModel
+                  -import formsModule in app module
+                  -[(ngModel)]="property_name"    forms moduleis needed       
+
+18 directives - to manipulate DOM content
+
+         1)component directives
+         2)structural directives - to add or remove html elments based some condition
+
+                  i)*ngIf = "condition"
+                  ii)*ngFor = "let i of array name"
+
+19 Activated Route //class - viewContact - to pass id to the url
+        Provides access to information about a route associated with a component that is loaded in an outlet.
+        Use to traverse the RouterState tree and extract information from nodes.
+
+        params  -- Observable<Params>	//params - //method
+                --An observable of the matrix parameters scoped to this route.
+
+20 angular pipes:Angular provides built-in pipes for typical data transformations, including transformations for internationalization (i18n), which use locale information to format data. The following are commonly used built-in pipes for data formatting:
+
+   eg:date
+
+   create a pipe for searching
+
+   ng g p pipe_folder/pipe_name
+
+   ng g p pipes/filter
+
+ 21 add contact,delete contact,update contact  
+
